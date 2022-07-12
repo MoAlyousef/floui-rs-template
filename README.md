@@ -27,3 +27,5 @@ xcodebuild build -configuration Debug -sdk iphonesimulator CODE_SIGN_IDENTITY=""
 xcrun simctl install "iPhone 13 Pro" build/Debug-iphonesimulator/ios.app
 xcrun simctl launch "iPhone 13 Pro" <your bundle identifier>
 ```
+
+Building from the command-line is sometimes finicky though. It would be better to use the IDE, and build for all supported archs. You can also use cargo-lipo to build universal binaries for iOS.
