@@ -7,16 +7,17 @@
 
 #import "ViewController.h"
 
+extern void *floui_main(void *, void *, void *);
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    floui_main((void *)CFBridgingRetain(self), nil, nil);
 }
 
-
 @end
+

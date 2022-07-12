@@ -6,6 +6,7 @@ To build the static lib (for example for my android simulator and my iphone simu
 ```
 cargo build --target=i686-linux-android
 cargo build --target=x86_64-apple-ios
+cargo build --target=aarch64-apple-ios
 ```
 
 To build for android, either open the android dir in Android Studio, otherwise you can do it from the command-line:
