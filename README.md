@@ -19,7 +19,7 @@ gradlew installDebug
 adb shell am start -n "com.example.android/com.example.android.MainActivity" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER
 ```
 
-To build for ios, open the ios folder in XCode, or from the command-line:
+To build for ios-simulator, open the ios folder in XCode, or from the command-line:
 ```
 xcrun simctl list # to get list of simulators
 xcrun simctl boot "iPhone 13 Pro" # to start my iphone 13 pro simulator
