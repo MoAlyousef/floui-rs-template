@@ -30,8 +30,6 @@
 		5A0847DB287DFBED0027E7D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A0847DC287DFBED0027E7D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A0847E8287EF8340027E7D1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		5A0847EE287EFBC60027E7D1 /* libmyapp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmyapp.a; path = "../target/aarch64-apple-ios/debug/libmyapp.a"; sourceTree = "<group>"; };
-		5A0847EF287EFBF60027E7D1 /* libmyapp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmyapp.a; path = "../target/x86_64-apple-ios/debug/libmyapp.a"; sourceTree = "<group>"; };
 		5A0847F0287EFCCD0027E7D1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -86,8 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				5A0847F0287EFCCD0027E7D1 /* WebKit.framework */,
-				5A0847EE287EFBC60027E7D1 /* libmyapp.a */,
-				5A0847EF287EFBF60027E7D1 /* libmyapp.a */,
 				5A0847E8287EF8340027E7D1 /* libc++.tbd */,
 			);
 			name = Frameworks;
@@ -311,9 +307,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
-				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/../target/aarch64-apple-ios/debug/";
-				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/../target/x86_64-apple-ios/debug/";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../target/universal/release";
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-lmyapp";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neurosrg.ios;
@@ -341,9 +335,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
-				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/../target/aarch64-apple-ios/release/";
-				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/../target/x86_64-apple-ios/release/";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../target/universal/release";
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-lmyapp";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neurosrg.ios;

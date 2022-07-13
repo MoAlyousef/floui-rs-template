@@ -4,9 +4,8 @@ This builds a staticlib crate called myapp. On android, remember to set ANDROID_
 
 To build the static lib (for example for my android simulator and my iphone simulator):
 ```
-cargo build --target=i686-linux-android
-cargo build --target=x86_64-apple-ios
-cargo build --target=aarch64-apple-ios
+cargo build --target=i686-linux-android --release
+cargo lipo --release # for ios
 ```
 
 To build for android, either open the android dir in Android Studio, otherwise you can do it from the command-line:
@@ -23,9 +22,10 @@ To build for ios-simulator, open the ios folder in XCode, or from the command-li
 ```
 xcrun simctl list # to get list of simulators
 xcrun simctl boot "iPhone 13 Pro" # to start my iphone 13 pro simulator
-xcodebuild build -configuration Debug -sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+cd ios
+xcodebuild build -configuration Debug -sdk iphonesimulator -arch x86_64 CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 xcrun simctl install "iPhone 13 Pro" build/Debug-iphonesimulator/ios.app
 xcrun simctl launch "iPhone 13 Pro" <your bundle identifier>
 ```
 
-Building from the command-line is sometimes finicky though. It would be better to use the IDE, and build for all supported archs. You can also use cargo-lipo to build universal binaries for iOS.
+Building from the command-line is sometimes finicky though.
