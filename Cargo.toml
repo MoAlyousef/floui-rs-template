@@ -7,4 +7,4 @@ edition = "2021"
 crate-type = ["staticlib"]
 
 [dependencies]
-floui = { git = "https://github.com/MoAlyousef/floui-rs" }
+floui = "0.1"
