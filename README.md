@@ -1,6 +1,6 @@
 # floui-rs-template
 
-This builds a staticlib crate called myapp.
+This builds a staticlib crate called myapp. On android, remember to set ANDROID_SDK_ROOT and ANDROID_NDK_ROOT to their correct paths.
 
 To build the static lib (for example for my android simulator and my iphone simulator):
 ```
